@@ -108,6 +108,7 @@ class DataLoader():
                 input = torch.LongTensor(idx_input)
                 target = torch.LongTensor(idx_target)
                 yield input, target, mask
+                mask = []
 
             # click indices where a particular session meets second-to-last element
             start = start + (minlen - 1)
